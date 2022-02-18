@@ -1,0 +1,277 @@
+
+import java.util.Scanner;
+
+
+
+public class orderingsystem {
+    
+    public static Scanner input = new Scanner(System.in);
+    public static String again;
+    public static int choose,quantity=1;
+    public static double total=0,pay;
+    public static void menu(){
+    System.out.println("\t\t\t\t+===================================+");
+    System.out.println("\t\t\t\t         Buy your dream Shoes ");
+    System.out.println("\t\t\t\t   1. Nike                Php. 1500.00");
+    System.out.println("\t\t\t\t   2. Adidas              Php. 2000.00");
+    System.out.println("\t\t\t\t   3. Vanz                Php. 1350.00");
+    System.out.println("\t\t\t\t   4. Reebok              Php. 3000.00");
+    System.out.println("\t\t\t\t   5. Converse            Php. 2400.00");
+    System.out.println("\t\t\t\t   6. Jordan              Php. 2800.00");
+    System.out.println("\t\t\t\t   7. Puma                Php. 2800.00");
+    System.out.println("\t\t\t\t   8. Kapa                Php. 2800.00");
+    System.out.println("\t\t\t\t   9. Venice              Php. 2800.00");
+    System.out.println("\t\t\t\t   10.Cat                 Php. 2800.00");
+    System.out.println("\t\t\t\t   11. CANCEL                         ");
+    System.out.println("\t\t\t\t+====================================+");
+    }
+    
+    public static void order(){
+    System.out.println(", Enter 1 to Nike \n, Enter 2 to Adidas \n, Enter 3 to Vanz \n, Enter 4 Reebook \n, Enter 5 to Converse \n, Enter 6 to Jordan \n, Enter 7 to Puma \n, Enter 8 to Kapa \n, Enter 9 to Venice \n, Enter 10 to Cat \n, Enter 11 to cancel ");
+    System.out.println("Add your Cart by choosing your dream shoes... ");
+    System.out.println("\nEnter you want to buy: ");
+    choose = input.nextInt();
+    //conditions
+    if(choose==1){
+        
+        System.out.println("You choose Nike ");
+        System.out.print("\nHow many Nike you want to Buy? ");
+        quantity =input.nextInt();
+        total = total +(quantity*1500);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Check and N for Checkout: ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter your payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Your payment is not enough");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+    }else if(choose==2){
+        System.out.println("You choose Adidas");
+        System.out.print("\nHow many Adidas you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*2000);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Check and N for Checkout : ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment: ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your  change is " + total);
+            }
+        }
+      }else if(choose==3){
+        System.out.println("You choose Vanz");
+        System.out.print("\nHow many Vanz you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*1350);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Check and N for Checkout: ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+    }else if(choose==4){
+        System.out.println("You choose Adidas");
+        System.out.print("How many Adidas you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*3000);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Yes and N for Checkout : ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+      }else if(choose==5){
+        System.out.println("You choose Adidas");
+        System.out.print("How many Adidas you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*24000);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Yes and N for N : ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+      }else if(choose==6){
+        System.out.println("You choose Adidas");
+        System.out.print("How many Adidas you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*2800);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Yes and N for Checkout : ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+      }else if(choose==7){
+        System.out.println("You choose Puma");
+        System.out.print("How many Adidas you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*2800);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Yes and N for Checkout : ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+      }else if(choose==8){
+        System.out.println("You choose Kapa");
+        System.out.print("How many Adidas you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*2800);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Yes and N for Checkout : ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+      }else if(choose==9){
+        System.out.println("You choose Venice");
+        System.out.print("How many Adidas you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*2800);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Yes and N for N : ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+      }else if(choose==10){
+        System.out.println("You choose Cata");
+        System.out.print("How many Adidas you want to Buy?: ");
+        quantity =input.nextInt();
+        total = total +(quantity*2800);
+        
+        System.out.println("You want to buy again? ");
+        System.out.println("Enter Y for Yes and N for Checkout : ");
+        again = input.next();
+        if(again.equalsIgnoreCase("Y")){
+            order();
+        }else{
+            System.out.println("Your total order is:" + quantity);
+            System.out.println("Enter a payment ");
+            pay = input.nextDouble();
+            if(pay <=total){
+              System.out.println("Not enough payment");
+            }else{
+            System.out.println("Your total price is " + total);
+            total = pay-total;
+            System.out.println("Your change is " + total);
+            }
+        }
+      }else if(choose==11){
+        System.exit(0);
+    }else{
+        System.out.println("Choose Available product only!");
+        order();
+    }
+    }
+    public static void main(String[] args) {
+       menu();
+       order();
+    } 
+}
